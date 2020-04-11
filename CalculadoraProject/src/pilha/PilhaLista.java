@@ -20,7 +20,7 @@ public class PilhaLista<T> implements Pilha<T> {
     public T pop() {
         T retorno = head.getInfo();
         if (this.estaVazia()) {
-            throw new PilhaVaziaException();
+            throw new PilhaVaziaException("A pilha está vazia.");
         } else {
             head = head.getProx();
         }
@@ -31,7 +31,7 @@ public class PilhaLista<T> implements Pilha<T> {
     public T peek() {
         T retorno = head.getInfo();
         if (this.estaVazia()) {
-            throw new PilhaVaziaException();
+            throw new PilhaVaziaException("A pilha está vazia.");
         }
         return retorno;
     }
@@ -44,14 +44,13 @@ public class PilhaLista<T> implements Pilha<T> {
     @Override
     public void liberar() {
         if (this.estaVazia()) {
-            throw new PilhaVaziaException();
+            throw new PilhaVaziaException("A pilha está vazia.");
         } else {
             while (head != null) {
                 head = head.getProx();
                 head = null;
             }
         }
-
     }
     
 @Override

@@ -5,10 +5,6 @@ public class ElementoLista<T> {
     private T info;
     private ElementoLista<T> prox;
 
-    public ElementoLista(T info) {
-        this.info = info;
-    }
-
     @Override
     public String toString() {
         return (String) getInfo();

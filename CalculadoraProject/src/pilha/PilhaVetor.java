@@ -16,7 +16,7 @@ public class PilhaVetor<T> implements Pilha<T> {
     @Override
     public void push(T info) {
         if (tamanho == limite) {
-            throw new PilhaCheiaException();
+            throw new PilhaCheiaException("Tamanho da lista não é válido.");
         } else {
             this.info[tamanho] = info;
             tamanho++;
@@ -26,7 +26,7 @@ public class PilhaVetor<T> implements Pilha<T> {
     @Override
     public T pop() {
         if (estaVazia()) {
-            throw new PilhaVaziaException();
+            throw new PilhaVaziaException("A pilha está vazia.");
         } else {
             T valor;
             valor = info[tamanho - 1];
@@ -40,7 +40,7 @@ public class PilhaVetor<T> implements Pilha<T> {
     @Override
     public T peek() {
         if (estaVazia()) {
-            throw new PilhaVaziaException();
+            throw new PilhaVaziaException("A pilha está vazia.");
         } else {
             return info[tamanho - 1];
         }

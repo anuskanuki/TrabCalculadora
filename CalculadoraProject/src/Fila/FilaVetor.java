@@ -17,7 +17,7 @@ public class FilaVetor<T> implements Fila<T> {
     @Override
     public void inserir(T valor) {
         if (tamanho == limite) {
-            throw new FilaCheiaException();
+            throw new FilaCheiaException("A fila está cheia.");
         }
         int fim;
         fim = (inicio + tamanho) % limite;
@@ -28,7 +28,7 @@ public class FilaVetor<T> implements Fila<T> {
     @Override
     public T retirar() {
         if (estaVazia()) {
-            throw new FilaVaziaException();
+            throw new FilaVaziaException("A fila está vazia.");
         }
         T valor;
         valor = info[inicio];
@@ -41,7 +41,7 @@ public class FilaVetor<T> implements Fila<T> {
     @Override
     public T peek() {
         if (estaVazia()) {
-            throw new FilaVaziaException();
+            throw new FilaVaziaException("A fila está vazia.");
         }
         return info[inicio];
     }
@@ -91,5 +91,4 @@ public class FilaVetor<T> implements Fila<T> {
     public int getLimite() {
         return this.limite;
     }
-
 }
