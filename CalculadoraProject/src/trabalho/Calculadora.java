@@ -3,6 +3,9 @@ package trabalho;
 import Fila.Fila;
 import Fila.FilaVetor;
 import java.util.Arrays;
+import pilha.Pilha;
+import pilha.PilhaVetor;
+
 
 public class Calculadora {
 
@@ -10,11 +13,11 @@ public class Calculadora {
         switch (tipo) {
             case 1:
                 try {
-                    Double.parseDouble(inserir);
-                } catch (NumberFormatException e) {
-                    throw new RuntimeException("Expressão inválida");
-                }
-                break;
+                Double.parseDouble(inserir);
+            } catch (NumberFormatException e) {
+                throw new RuntimeException("Expressão inválida");
+            }
+            break;
             case -1:
                 return;
             case 2:
@@ -74,5 +77,51 @@ public class Calculadora {
 
     public double gerarExprPosfixada(Fila<String> exprPosfixada) {
         return 0;
+    }
+
+    public static double CalcPilhaVetor(String exp) throws Exception {
+
+        char[] tokens = exp.toCharArray();
+
+        // Cria uma pilha vetor vazia
+        Pilha<Double> stack = new PilhaVetor<>(exp.length());
+
+        for (int i = 0; i < tokens.length; i++) {
+
+            if (tokens[i] == ' ') {
+                continue;
+            }
+
+            // Se for um número, adiciona na pilhaVetor
+            if (tokens[i] >= '0' && tokens[i] <= '9') {
+                StringBuilder sbud = new StringBuilder();
+                // Se for um número com mais de uma casa
+                while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9' || tokens[i] == '.') {
+                    sbud.append(tokens[i++]);
+                }
+                
+                stack.push(Double.parseDouble(sbud.toString()));
+            } // Se for um operador
+            else {
+
+                // Tirar dois valores
+                double x = stack.pop();
+                double y = stack.pop();
+
+                // Faz a operação, e adiciona na pilhaVetor
+                if (exp.charAt(i) == '+') {
+                    stack.push(y + x);
+                } else if (exp.charAt(i) == '-') {
+                    stack.push(y - x);
+                } else if (exp.charAt(i) == '*') {
+                    stack.push(y * x);
+                } else if (exp.charAt(i) == '/') {
+                    stack.push(y / x);
+                }
+            }
+        }
+
+        // resultado da expressão
+        return stack.pop();
     }
 }
