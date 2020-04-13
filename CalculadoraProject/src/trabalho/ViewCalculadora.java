@@ -24,7 +24,7 @@ public class ViewCalculadora extends javax.swing.JFrame {
         lbResultado = new javax.swing.JLabel();
         btnVetor = new javax.swing.JButton();
         inputExpressao = new javax.swing.JTextField();
-        edResultado = new javax.swing.JTextField();
+        resultado = new javax.swing.JTextField();
         btnLista = new javax.swing.JButton();
 
         btCalcular1.setText("Calcular");
@@ -39,7 +39,7 @@ public class ViewCalculadora extends javax.swing.JFrame {
 
         lbExpressao.setText("Expressão");
 
-        lbResultado.setText("Resultado:");
+        lbResultado.setText("Resultado");
 
         btnVetor.setText("Calcular via PilhaVetor");
         btnVetor.addActionListener(new java.awt.event.ActionListener() {
@@ -62,44 +62,43 @@ public class ViewCalculadora extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                        .addGap(50, 50, 50)
+                        .addComponent(btnVetor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLista, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(lbExpressao)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lbResultado)
-                        .addGap(4, 4, 4)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(27, 27, 27)
+                        .addComponent(inputExpressao, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                        .addGap(77, 77, 77))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnVetor, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                        .addComponent(lbResultado)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnLista))
-                    .addComponent(inputExpressao, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
-                    .addComponent(edResultado))
-                .addGap(49, 49, 49))
+                        .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbExpressao)
                     .addComponent(inputExpressao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVetor)
                     .addComponent(btnLista))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(edResultado, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
                         .addComponent(lbResultado)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(resultado, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -109,7 +108,8 @@ public class ViewCalculadora extends javax.swing.JFrame {
     private void btnVetorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVetorActionPerformed
         try {
             Calculadora calculadora = new Calculadora();
-            double expressao = calculadora.Vetor(inputExpressao.getText());
+            //  double expressao = calculadora.Vetor(inputExpressao.getText());
+            inputExpressao.setText(Double.toString(calculadora.Vetor(inputExpressao.getText())));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex.toString());
         }
@@ -121,7 +121,8 @@ public class ViewCalculadora extends javax.swing.JFrame {
     private void btnListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListaActionPerformed
         try {
             Calculadora calculadora = new Calculadora();
-            double expressao = calculadora.Lista(inputExpressao.getText());
+            //   double expressao = calculadora.Lista(inputExpressao.getText());
+            inputExpressao.setText(Double.toString(calculadora.Vetor(inputExpressao.getText())));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex.toString());
         }    }//GEN-LAST:event_btnListaActionPerformed
@@ -166,9 +167,9 @@ public class ViewCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton btCalcular1;
     private javax.swing.JButton btnLista;
     private javax.swing.JButton btnVetor;
-    private javax.swing.JTextField edResultado;
     private javax.swing.JTextField inputExpressao;
     private javax.swing.JLabel lbExpressao;
     private javax.swing.JLabel lbResultado;
+    private javax.swing.JTextField resultado;
     // End of variables declaration//GEN-END:variables
 }
