@@ -48,7 +48,7 @@ public class ViewCalculadora extends javax.swing.JFrame {
             }
         });
 
-        inputExpressao.setText("2 * (5 - 1)");
+        inputExpressao.setText("1 2 -4 5 + *");
 
         btnLista.setText("Calcular via PilhaLista");
         btnLista.addActionListener(new java.awt.event.ActionListener() {
@@ -108,8 +108,8 @@ public class ViewCalculadora extends javax.swing.JFrame {
     private void btnVetorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVetorActionPerformed
         try {
             Calculadora calculadora = new Calculadora();
-            //  double expressao = calculadora.Vetor(inputExpressao.getText());
-            inputExpressao.setText(Double.toString(calculadora.Vetor(inputExpressao.getText())));
+            double expressao = calculadora.Vetor(inputExpressao.getText());
+            resultado.setText(Double.toString(expressao));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex.toString());
         }
@@ -121,8 +121,8 @@ public class ViewCalculadora extends javax.swing.JFrame {
     private void btnListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListaActionPerformed
         try {
             Calculadora calculadora = new Calculadora();
-            //   double expressao = calculadora.Lista(inputExpressao.getText());
-            inputExpressao.setText(Double.toString(calculadora.Vetor(inputExpressao.getText())));
+            double expressao = calculadora.Lista(inputExpressao.getText());
+            resultado.setText(Double.toString(expressao));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex.toString());
         }    }//GEN-LAST:event_btnListaActionPerformed
