@@ -4,7 +4,6 @@ import pilha.Pilha;
 import pilha.PilhaVetor;
 
 public class CalcTest {
-
     public static double PilhaVetor(String exp) throws Exception {
 
         char[] tokens = exp.toCharArray();
@@ -25,7 +24,7 @@ public class CalcTest {
                 while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9' || tokens[i] == '.') {
                     sbud.append(tokens[i++]);
                 }
-
+                
                 stack.push(Double.parseDouble(sbud.toString()));
             } // Se for um operador
             else {
