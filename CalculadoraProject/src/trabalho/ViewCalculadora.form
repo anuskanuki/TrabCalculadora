@@ -34,45 +34,65 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbResultado" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbExpressao" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnVetor" pref="163" max="32767" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnLista" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane1" min="-2" pref="515" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="btnLista" min="-2" pref="176" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="lbExpressao" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="344" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
-                  <Component id="inputExpressao" max="32767" attributes="0"/>
-                  <Component id="resultado" alignment="0" max="32767" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="inputExpressao" min="-2" pref="447" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbResultado" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnVetor" min="-2" pref="176" max="-2" attributes="0"/>
+                              <Component id="resultado" alignment="0" min="-2" pref="444" max="-2" attributes="0"/>
+                              <Component id="limparBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <EmptySpace pref="46" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <EmptySpace pref="43" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="284" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="lbExpressao" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="inputExpressao" min="-2" pref="42" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbExpressao" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="inputExpressao" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="btnVetor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLista" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="lbResultado" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="resultado" min="-2" pref="73" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnVetor" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-                  <Component id="btnLista" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="36" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbResultado" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="resultado" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="limparBtn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -80,17 +100,27 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lbExpressao">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Express&#xe3;o"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbResultado">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Resultado"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnVetor">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Dialog" size="11" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Calcular via PilhaVetor"/>
+        <Property name="toolTipText" type="java.lang.String" value="calcula o resultado da express&#xe3;o via vetor de pilhas"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVetorActionPerformed"/>
@@ -99,16 +129,56 @@
     <Component class="javax.swing.JTextField" name="inputExpressao">
       <Properties>
         <Property name="text" type="java.lang.String" value="1 2 -4 5 + *"/>
+        <Property name="toolTipText" type="java.lang.String" value="express&#xe3;o deve ter formato p&#xf3;s-fixada"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="resultado">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnLista">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Dialog" size="11" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Calcular via PilhaLista"/>
+        <Property name="toolTipText" type="java.lang.String" value="calcula o resultado da express&#xe3;o via lista encadeada de pilhas"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnListaActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="0"/>
+            </Property>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="    &#xa;    Ol&#xe1;! Aqui voc&#xea; encontra uma calculadora diferente! Funciona assim:&#xa;&#xa;    Digitando sua express&#xe3;o na forma de nota&#xe7;&#xe3;o p&#xf3;s-fixa*, o c&#xe1;lculo &#xa;    pode ser feito via um vetor de pilhas (navega&#xe7;&#xe3;o pelo &#xed;ndice do&#xa;    vetor) ou uma lista encadeada de pilhas (cada elemento tem seus ponteiros).&#xa;    Voc&#xea; decide!&#xa;&#xa;   * Exemplos de Nota&#xe7;&#xe3;o p&#xf3;s-fixa:&#xa;&#xa;    Express&#xe3;o (1-2)*(4+5) em nota&#xe7;&#xe3;o p&#xf3;s-fixa 1 2 -4 5 + *&#xa;&#xa;    Express&#xe3;o ((23+12)/7)*(5+(3-12)) em nota&#xe7;&#xe3;o p&#xf3;s-fixa 23 12 + 7 / 3 12 &#x2013;5 + *"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="limparBtn">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Dialog" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Limpar"/>
+        <Property name="toolTipText" type="java.lang.String" value="limpar resultado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limparBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
